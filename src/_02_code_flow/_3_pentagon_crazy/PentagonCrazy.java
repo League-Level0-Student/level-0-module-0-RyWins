@@ -13,27 +13,37 @@ public class PentagonCrazy {
 		
 		//  Create a new Robot
 
+		Robot ramsey = new Robot();
 		//  Put the robot's pen down
 
+		ramsey.penDown();
 		//  SPEED. Make the robot go at maximum speed (100)
 
+		ramsey.setSpeed(1);
 		//  COLOR. Set the pen to a color that you like for the shape
 
+		ramsey.setRandomPenColor();
 		//  NUMBER OF SIDES. Make an int variable for the number of sides the shape will have.
 		//  				(Hint: its called PentagonCrazy)
 
+		int sides = 6;
 		//  TURN ANGLE. Make another int variable for the angle the robot must turn. 
 		//  			Hint: Divide 360 by the number of sides the shape has to get the angle.
-		
+		int angle=(360/sides);
 		//  COUNT. Make another int variable to count how many times the loop has repeated
 		//         Set its start value to zero.
 
+		int count = 0;
+		
+	while(count < 200) {
+	
 		//  LOOP. Start a while loop to repeat the DRAW, TURN, and INCREASE COUNT code 200 times. 
 		
 				//  DRAW.  Make the robot move the amount in your count variable
-		
+		ramsey.move(count);
 				//  TURN.  Turn the robot the amount in your angle variable + 1
 
+		ramsey.turn(angle+1);
 				//  INCREASE COUNT. Increase the count by 1
 		
 		//  End the while loop here
